@@ -2,8 +2,6 @@
 
 > Embedded control code for **EKIN V1**, a four-wheel **mecanum-drive** autonomous robot built for the Science Olympiad **Robot Tour** event. The robot navigates an unseen, maze-like track through a sequence of gates and stops on a target point — scored not on speed, but on how precisely it hits a **requested target time** and **target position**.
 
-> ⚠️ **This README is a scaffold.** Sections marked `[FILL IN]` need details only the team knows (exact parts, pinout, tuning values). Replace them, delete this banner, and the doc is competition-grade.
-
 ---
 
 ## Table of contents
