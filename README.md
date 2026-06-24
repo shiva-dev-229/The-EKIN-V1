@@ -23,7 +23,7 @@
 
 ## The event
 
-Robot Tour (Science Olympiad, Division [B/C — `[FILL IN]`]) tasks one robot with autonomously driving a track, passing through each labelled **gate** in order, and coming to rest on a **target point**. The catch: scoring rewards *precision over speed*. Points are lost for missing the target time (in either direction — too fast is as bad as too slow) and for distance from the target point. The track layout is revealed only on competition day, and the team gets a short window (~10 minutes) to program the run before scoring.
+Robot Tour (Science Olympiad) tasks one robot with autonomously driving a track, passing through each labelled **gate** in order, and coming to rest on a **target point**. The catch: scoring rewards *precision over speed*. Points are lost for missing the target time (in either direction — too fast is as bad as too slow) and for distance from the target point. The track layout is revealed only on competition day, and the team gets a short window (~10 minutes) to program the run before scoring.
 
 This makes the event a control-and-calibration problem, not a horsepower problem: the robot has to travel **known distances and turns very repeatably**, then have its segment timing tuned on the day to land on the requested time.
 
@@ -66,12 +66,10 @@ The firmware is written in C++ ([CLion project under `soft/`]). At a high level 
 
 ## How a run works
 
-1. Power on and let sensors initialize/calibrate (`[FILL IN — e.g. keep robot still N seconds for gyro calibration]`).
-2. The run sequence executes a pre-programmed series of motion primitives that thread the gates in order.
-3. The robot decelerates onto the target point and stops.
-4. Segment timings are tuned so total elapsed time matches the **requested target time**.
-
-`[FILL IN — how is a run started? button press? how is the path for a new track entered on the day — recompiled, or editable constants?]`
+1. Power on and let sensors initialize/calibrate 
+2. The robot decelerates onto the target point and stops.
+3. Segment timings are tuned so total elapsed time matches the **requested target time**.
+4. To start the robot, click the button with a pencil like the requirement.
 
 ## Building & flashing
 
@@ -82,18 +80,6 @@ The firmware is written in C++ ([CLion project under `soft/`]). At a high level 
 # Select the [board] target and the correct serial port
 # Build and upload to the microcontroller
 ```
-
-`[FILL IN — exact steps, board package, libraries required (e.g. Wire, an MPU6050 library, encoder library)]`
-
-## Tuning
-
-The values most often adjusted between practice and competition:
-
-- **Distance constant** — steps/encoder-counts per cm. `[FILL IN current value]`
-- **Turn constant** — correction for over/under-rotation. `[FILL IN]`
-- **Target-time trim** — how segment delays are scaled to hit the requested time. `[FILL IN]`
-
-`[FILL IN — any tips the team learned: surface differences, battery-voltage effects on speed, etc.]`
 
 ## Repository structure
 
@@ -111,4 +97,4 @@ The-EKIN-V1/
 
 ## Team
 
-Built by `[FILL IN — team members]` for `[FILL IN — school / team name]`, Science Olympiad `[season/year]`.
+Built by `Shivansh Upadhyay, Aryav Agarwal` for `Brookfield Central High School Science Olympiad Team`, Science Olympiad `2025-2026`.
